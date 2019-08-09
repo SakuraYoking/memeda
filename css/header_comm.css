@@ -14,6 +14,11 @@ body{
     width: 100%;
     background-color: #fff;
 }
+#header-site.active2{
+    height: 64px;
+    width: 100%;
+    background-color: #fff;
+}
 .navbar-container{
     margin:0 auto;
     width:1200px;
@@ -32,6 +37,9 @@ body{
     margin: 19px 39px 19px 0; 
 }
 .navbar-logo.active{
+    background-image:url(../img/logo2.svg);
+}
+.navbar-logo.active2{
     background-image:url(../img/logo2.svg);
 }
 .navbar-sort{
@@ -116,7 +124,7 @@ body{
     opacity: .5;
     background-color: #000;
     z-index: 990;
-} 
+}  
 .headersearch{
     display: none;
 }
@@ -124,7 +132,7 @@ body{
     display: inline-block;
     position: absolute;
     top:15px;
-    left:351.5px;
+    left:416.5px;
 }
 .search-btn {
     display: inline-block;
@@ -149,6 +157,10 @@ body{
     padding: 4px 8px;
     border: none;
     vertical-align: middle;
+    position: absolute;
+    left:980px;
+    top:-3px;
+    transition:all .5s linear;
 }
 .close-btn {
     display: inline-block;
@@ -156,10 +168,55 @@ body{
     height: 24px;
     color: #616466;
     cursor: pointer;
-    margin-left: 244px;
-    margin-top: 3px;
+    position: absolute;
+    left: 1116px;
+    top: 3px;
     background-size: cover;
     background-image: url(../img/close.svg);
     vertical-align: middle;
     background-position:center center;
+}
+/* 搜索栏推荐列表 */
+.search-push{
+    position: fixed;
+    background-color: #fff;
+    border-top: solid 1px #e7eef3;
+    z-index: 1001;
+    top: 64px;
+    width: 704px;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 2px;
+    padding: 16px 0;
+    display: none;
+}
+.search-push h6{
+    font-size: 12px;
+    padding: 8px 0;
+    margin: 0 40px;
+    color: #919699;
+}
+.hot-word-list{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    background: 0 0;
+    list-style:none;   
+}
+.quick-link a{
+    padding: 8px 40px;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+    color: #303233;
+    text-decoration: none;
+}
+.quick-link:hover{
+    background-color:#ebeff2;
 }

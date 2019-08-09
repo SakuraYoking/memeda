@@ -1,3 +1,4 @@
+//控制头部的颜色变化停留
 $("#header-site").mouseover(function(){
     $(this).addClass("active");
     $(".navbar-list a").css("color","#272727");
@@ -5,6 +6,7 @@ $("#header-site").mouseover(function(){
     $(".search").addClass("active");
     $(".user").addClass("active");
 });
+//控制头部的颜色变化移出
 $("#header-site").mouseleave(function(){
     $(this).removeClass("active");
     $(".navbar-list a").css("color","#fff");
@@ -12,7 +14,35 @@ $("#header-site").mouseleave(function(){
     $(".search").removeClass("active");
     $(".user").removeClass("active");
 })
+//搜索栏的响应
 $(".search").click(function(){
     $(".headersearch").show();
     $(".navbar-sort").hide();
-    })
+    $("#header-site").addClass("active2");
+    $(".navbar-logo").addClass("active2");
+    $(".search-input").css("left","220px");
+})
+//封装搜索栏点击隐藏事件
+function hide(){
+    $(".headersearch").hide();
+    $(".navbar-sort").show();
+    $("#header-site").removeClass("active2")
+    $(".navbar-logo").removeClass("active2");
+    $(".search-input").css("left","980px");
+    }
+$(".close-btn").click(function(){
+    hide(); 
+})
+//热搜栏点击事件
+// $(".search-input").click(function(){
+//     setTimeout(function(){
+//         $(".search-push").mouseover();
+//     },1000); 
+// })
+$(".search-input").click(function(){
+     $(".search-push").show();
+ })
+$(".search-box-cover").click(function(){
+    $(".search-push").hide();
+    hide();
+})
