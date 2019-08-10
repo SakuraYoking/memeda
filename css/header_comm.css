@@ -8,6 +8,7 @@ body{
     height: 64px;
     width: 100%;
     background-color: #272727;
+    position: relative;
 }
 #header-site.active{
     height: 64px;
@@ -114,6 +115,9 @@ body{
 }
 .navbar-right{
     float: right;
+    position: relative;
+    padding: 17px 0px;
+    top:-16px;
 }
 .search-box-cover{
     position: fixed;
@@ -219,4 +223,56 @@ body{
 }
 .quick-link:hover{
     background-color:#ebeff2;
+}
+.down-menu{
+    width: 100px;
+    height: 88px;
+    background-color:#fff;
+    position: absolute;
+    left:100px;
+    top:44px;  
+    border: 1px solid #616466;
+    display: none; 
+    border-radius:10px;
+}
+.down-menu-ul{
+    list-style: none;
+    text-align: center;
+    
+}
+.down-menu-ul li{
+    white-space: nowrap;
+    display: inline-block;
+    color: #303233;
+    height: 43px;
+    width: 100%;
+    border-radius:10px; 
+}
+.ul-item-1{
+    border-bottom:1px solid #919699;
+}
+/* 显示用户  登录 注册 列表 */
+.user:hover+.down-menu{
+    display: block;
+}
+.down-menu:hover{
+    display: block;
+}
+.down-menu-ul a{
+    color: #616466;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    line-height: 44px;
+}
+/* 登录 选择框 变色 */
+.down-menu-ul li:hover{
+    background-color:#ebeff2 ;
+}
+.nva-columns-box{
+    background-color:#616466;
+    width: 100%;
+    height: 632px;
+    position: absolute;
+    left:0;
 }

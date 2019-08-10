@@ -29,6 +29,8 @@ function hide(){
     $("#header-site").removeClass("active2")
     $(".navbar-logo").removeClass("active2");
     $(".search-input").css("left","980px");
+    //再次获取值解决浏览器BUG
+    $(".search-input").css("left");
     }
 $(".close-btn").click(function(){
     hide(); 
