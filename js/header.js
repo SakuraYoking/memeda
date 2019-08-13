@@ -48,3 +48,10 @@ $(".search-box-cover").click(function(){
     $(".search-push").hide();
     hide();
 })
+// 第一页导航
+$(".navbar-list li:first-child").mouseover(function(){
+    $(".nva-columns-box").show();
+})
+$(".navbar-list li:first-child").mouseleave(function(){
+    $(".nva-columns-box").hide();
+})
