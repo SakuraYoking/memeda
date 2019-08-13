@@ -269,6 +269,7 @@ body{
 .down-menu-ul li:hover{
     background-color:#ebeff2 ;
 }
+/* 第一个列表框总样式 */
 .nva-columns-box{
     background-color:#616466;
     width: 100%;
@@ -276,3 +277,37 @@ body{
     position: absolute;
     left:0;
 }
+/* 主体部分 */
+.list-box-all{
+    background-color:#449944;
+    margin:0px 351.5px;
+    padding-top:24px;
+    height: 632px;
+}
+/* 上部 */
+.list-box-top{
+    height: 528px;
+    width: 100%;
+    background-color:yellow;
+}
+/* 下部 */
+.list-box-bottom{
+    height:80px;
+    width: 100%;
+    background-color:red;
+}
+/* 上部第一层 */
+.list-box-top-1{
+    height:208px;
+    width:100%;
+    background-color:blue;
+    margin:0px;
+}
+.list-box-top-2{
+    height:296px;
+    width:100%;
+    background-color:pink;
+}
+/* .top-1-item{
+    padding: 0px;
+} */
