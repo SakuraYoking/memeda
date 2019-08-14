@@ -149,7 +149,7 @@ body{
     color: #616466;
     cursor: pointer;
     margin-right: 4px;
-    margin-left: 182px;
+    margin-left: 120px;
     margin-top: 3px;
     background-size: cover;
     background-image: url(../img/sousuo-B.svg);
@@ -167,7 +167,7 @@ body{
     vertical-align: middle;
     position: absolute;
     left:980px;
-    top:-3px;
+    top:-1px;
     transition:all .5s linear;
 }
 .close-btn {
@@ -399,4 +399,92 @@ body{
     left:160PX;
     background-size: cover;
     margin-left: 24px;
+}
+/* 第二个导航页面 */
+
+/* 总框样式 */
+.nva-columns-box-2{
+    background-color:#fff;
+    width: 100%;
+    height: 704px;
+    position: absolute;
+    left:0;
+    border-bottom: 1px solid   #dedfe0;
+    display: block;
+}
+/* 主体样式 */
+.list-box-all-2{
+    background-color:#fff;
+    margin:0px auto;
+    height: 704px;
+    max-width: 1200px;
+}
+.list-box-header{
+    height: 72px;
+    background-color: #e1e7eb;
+}
+.list-box-mid{
+    height: 552px;
+    width: 100%;
+    background-color:#fff;
+    box-sizing: border-box;
+}
+.list-box-bottom-2{
+    height:80px;
+    width: 100%;
+    background-color:#fff;
+    border-bottom: 1px solid   #dedfe0;
+}
+/* 头部的导航 */
+.B-head-list{
+    margin: 0px;
+}
+.B-head-list li{
+    float: left;
+    list-style: none;
+    height: 72px;
+    position: relative;
+    display: block;
+    border-left:2px solid #fff;
+    box-sizing: border-box;
+}
+.B-head-list a{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 24px;
+    color: #3b3e40 !important;
+    font-weight: 600;
+    position: relative;
+    transition: all .3s ease;
+    cursor: pointer;
+    height: 72px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.a2-icon{
+    background-image: url(../img/6dian.svg);
+    display: inline-block;
+    height: 16px;
+    width: 21px;
+    position: absolute;
+    top:29PX;
+    left:150PX;
+    background-size: cover;
+}
+.list-box-mid{
+    padding-top:24px;
+    height: 552px;
+}
+.list-box-mid-1{
+    height: 240px;
+    margin:0px;
+    border-bottom: 1px solid  #f1f3f5;
+}
+.list-box-mid-2{
+    height: 264px;
+    margin:0px;
+    border-bottom: 1px solid  #f1f3f5;
 }

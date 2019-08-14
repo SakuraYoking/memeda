@@ -20,7 +20,7 @@ $(".search").click(function(){
     $(".navbar-sort").hide();
     $("#header-site").addClass("active2");
     $(".navbar-logo").addClass("active2");
-    $(".search-input").css("left","220px");
+    $(".search-input").css("left","150px");
 })
 //封装搜索栏点击隐藏事件
 function hide(){
@@ -54,4 +54,11 @@ $(".navbar-list li:first-child").mouseover(function(){
 })
 $(".navbar-list li:first-child").mouseleave(function(){
     $(".nva-columns-box").hide();
+})
+//第二页导航
+$(".navbar-list li:nth-child(2)").mouseover(function(){
+    $(".nva-columns-box-2").show();
+})
+$(".navbar-list li:nth-child(2)").mouseleave(function(){
+    $(".nva-columns-box-2").hide();
 })
