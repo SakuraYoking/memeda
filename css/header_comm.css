@@ -74,6 +74,7 @@ body{
 }
 .navbar-list>li>a:hover{
     color: #272727;
+    border-bottom:2px solid #616466;
     /* line-height: 64px;
     text-decoration: none;
     font-weight:600; 
@@ -400,7 +401,7 @@ body{
     background-size: cover;
     margin-left: 24px;
 }
-/* 第二个导航页面 */
+/* 第二个导航页面 （第三页共用）*/
 
 /* 总框样式 */
 .nva-columns-box-2{
@@ -487,4 +488,103 @@ body{
     height: 264px;
     margin:0px;
     border-bottom: 1px solid  #f1f3f5;
+}
+/* 第三层 */
+.nva-columns-box-3{
+    background-color:#fff;
+    width: 100%;
+    height: 704px;
+    position: absolute;
+    left:0;
+    border-bottom: 1px solid   #dedfe0;
+    display: block;
+}
+/* 主体样式 */
+.list-box-all-3{
+    background-color:#fff;
+    margin:0px auto;
+    height: 704px;
+    max-width: 1200px;
+}
+/* 3-4图片尺寸比较特殊 */
+.picture-size-s{
+    width: 160px;
+    height: 87.27px;
+}
+/* 第四层 */
+/* 总框 */
+.nva-columns-box-4{
+    background-color:#fff;
+    width: 100%;
+    height: 464px;
+    position: absolute;
+    left:0;
+    border-bottom: 1px solid   #dedfe0;
+    display: block;
+}
+.list-box-all-3{
+    background-color:#fff;
+    margin:0px auto;
+    height: 464px;
+    max-width: 1200px;
+    border-bottom: 1px solid   #dedfe0;
+}
+.box3-form-1{
+    padding-top:24px;
+    height: 232px;
+}
+.box3-form-2{
+    height: 208px;
+}
+/* 第五块 */
+.nva-columns-box-5{
+    background-color:#fff;
+    position: absolute;
+    display:block;
+    height: 0px;
+    left:750px;
+    overflow:hidden;
+    transition: all .3s linear;
+}
+.navbar-list>li:nth-child(5)>a:hover+div{
+    height:353px;
+}
+.box5-ul{
+    list-style:none;
+    border: 1px solid   #dedfe0; 
+}
+.box5-ul li{
+    display: block;
+    width: 100%;
+    font-size: 12px;  
+}
+
+.box5-ul a{
+    padding: 16px 32px;
+    white-space: nowrap;
+    display: inline-block;
+    color: #303233;
+    line-height: 1;
+    height: auto;
+    background: 0 0;
+    text-align: center;
+    width: 100%;
+}
+/* 第六页 */
+.nva-columns-box-6{
+    background-color:#fff;
+    width: 100%;
+    height: 328px;
+    position: absolute;
+    left:0;
+    border-bottom: 1px solid   #dedfe0;
+    display: block;
+}
+.list-box-all-4{
+    background-color:#fff;
+    margin:0px auto;
+    height: 328px;
+    max-width: 1200px;
+    border-bottom: 1px solid   #dedfe0;
+    padding: 24px 0px 48px 0px;  
 }

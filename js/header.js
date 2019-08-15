@@ -62,3 +62,24 @@ $(".navbar-list li:nth-child(2)").mouseover(function(){
 $(".navbar-list li:nth-child(2)").mouseleave(function(){
     $(".nva-columns-box-2").hide();
 })
+//第三页导航
+$(".navbar-list li:nth-child(3)").mouseover(function(){
+    $(".nva-columns-box-3").show();
+})
+$(".navbar-list li:nth-child(3)").mouseleave(function(){
+    $(".nva-columns-box-3").hide();
+})
+//第四页导航
+$(".navbar-list li:nth-child(4)").mouseover(function(){
+    $(".nva-columns-box-4").show();
+})
+$(".navbar-list li:nth-child(4)").mouseleave(function(){
+    $(".nva-columns-box-4").hide();
+})
+//第六页导航
+$(".navbar-list li:nth-child(6)").mouseover(function(){
+    $(".nva-columns-box-6").show();
+})
+$(".navbar-list li:nth-child(6)").mouseleave(function(){
+    $(".nva-columns-box-6").hide();
+})
