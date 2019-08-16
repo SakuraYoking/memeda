@@ -49,10 +49,10 @@ $(".search-box-cover").click(function(){
     hide();
 })
 // 第一页导航
-$(".navbar-list li:first-child").mouseover(function(){
+$(".navbar-list li:nth-child(1)").mouseover(function(){
     $(".nva-columns-box").show();
 })
-$(".navbar-list li:first-child").mouseleave(function(){
+$(".navbar-list li:nth-child(1)").mouseleave(function(){
     $(".nva-columns-box").hide();
 })
 //第二页导航

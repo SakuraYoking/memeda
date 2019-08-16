@@ -8,23 +8,19 @@ body{
 #header-site{
     height: 64px;
     width: 100%;
-    background-color: #272727;
+    background-color: #272727; 
     position: relative;
 }
 #header-site.active{
-    height: 64px;
-    width: 100%;
-    background-color: #fff;
+     background-color: #fff; 
 }
 #header-site.active2{
-    height: 64px;
-    width: 100%;
-    background-color: #fff;
-}
+     background-color: #fff; 
+} 
 /* 主体 */
 .navbar-container{
     margin:0 auto;
-    width:1200px;
+    width:1230px;
 }
 .navbar-header{
     height: 64px;
@@ -35,8 +31,8 @@ body{
 .navbar-logo{
     background-image:url(../img/logo1.svg);
     display: inline-block;
-    width: 45px;
-    height: 26px;
+    width: 45px !important;
+    height: 26px !important;
     background-size: cover;
     margin: 19px 39px 19px 0; 
 }
@@ -71,6 +67,8 @@ body{
     padding:0px 16px;
     display: block;
     text-align: center;
+    box-sizing: border-box;
+    height: 100%;
 }
 .navbar-list>li>a:hover{
     color: #272727;
@@ -186,6 +184,9 @@ body{
     background-position:center center;
 }
 /* 搜索栏推荐列表 */
+.search.box{
+    position: relative;
+}
 .search-push{
     position: fixed;
     background-color: #fff;
@@ -193,13 +194,14 @@ body{
     z-index: 1001;
     top: 64px;
     width: 704px;
-    left: 50%;
+    left:890px;
     transform: translate(-50%,0);
     font-size: 16px;
     line-height: 16px;
     border-radius: 2px;
     padding: 16px 0;
     display: none;
+    position: absolute;
 }
 .search-push h6{
     font-size: 12px;
@@ -290,7 +292,7 @@ body{
     margin:0px auto;
     padding-top:24px;
     height: 632px;
-    max-width: 1200px;
+    max-width: 1230px;
 }
 /* 上部 */
 .list-box-top{
@@ -418,11 +420,12 @@ body{
     background-color:#fff;
     margin:0px auto;
     height: 704px;
-    max-width: 1200px;
+    max-width: 1230px;
 }
 .list-box-header{
     height: 72px;
     background-color: #e1e7eb;
+    width:100%;
 }
 .list-box-mid{
     height: 552px;
@@ -504,7 +507,7 @@ body{
     background-color:#fff;
     margin:0px auto;
     height: 704px;
-    max-width: 1200px;
+    max-width: 1230px;
 }
 /* 3-4图片尺寸比较特殊 */
 .picture-size-s{
@@ -526,15 +529,17 @@ body{
     background-color:#fff;
     margin:0px auto;
     height: 464px;
-    max-width: 1200px;
+    max-width: 1230px;
     border-bottom: 1px solid   #dedfe0;
 }
 .box3-form-1{
     padding-top:24px;
     height: 232px;
+    margin:0px;
 }
 .box3-form-2{
     height: 208px;
+    margin:0px;
 }
 /* 第五块 */
 .nva-columns-box-5{
@@ -542,9 +547,12 @@ body{
     position: absolute;
     display:block;
     height: 0px;
-    left:750px;
+    left:-17px;
     overflow:hidden;
     transition: all .3s linear;
+}
+.navbar-list>li:nth-child(5){
+    position: relative !important;
 }
 .navbar-list>li:nth-child(5)>a:hover+div{
     height:353px;
@@ -584,7 +592,7 @@ body{
     background-color:#fff;
     margin:0px auto;
     height: 328px;
-    max-width: 1200px;
+    max-width: 1230px;
     border-bottom: 1px solid   #dedfe0;
     padding: 24px 0px 48px 0px;  
 }
