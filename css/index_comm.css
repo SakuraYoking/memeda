@@ -5,6 +5,9 @@
     height: 750px;
     background-color:#272727; 
 }
+#banner a{
+    text-decoration: none;
+}
 #big-box{
     width: 100%;
     height: 100%;
@@ -46,4 +49,77 @@
 #imgs-box img{
     display: block;
     margin: 0 auto;
+}
+.img-1 img{
+    background: url(../img/img01.png) no-repeat center;
+    background-size:auto 470px;
+    background-position-y: 20%; 
+}
+#list-box{
+    height: 200px;
+    position: absolute;
+    top:490px;
+    left:100px;
+}
+#ul-idxs{
+    list-style: none;
+}
+#ul-idxs li a{
+    padding: 6px 40px;
+    font-size: 14px;
+    color: #fff;
+    cursor: default;
+    font-weight: 600;
+}
+#list-box::before{
+    left: 0px;
+    top:123px;
+    position: absolute;
+    display: block;
+    width: 3px;
+    height: 18px;
+    content: '';
+    background-color: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#btn-left{
+    height: 750px;
+    left:0% ;
+    position: absolute;
+    z-index:1100;
+    padding-top:200px; 
+}
+#btn-right{
+    height: 750px;
+    left:100% ;
+    margin-left:-64px;
+    position: absolute;
+    z-index:1100;
+    padding-top:200px;
+}
+#btn-left span{
+    height: 128px;
+    width: 64px;
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+    cursor: pointer;
+    z-index:1100;
+    display: block;
+    background-color: rgba(194,200,204,.5); 
+    padding-top:32px; 
+}
+#btn-right span{
+    height: 128px;
+    width: 64px;
+    border-top-left-radius: 64px;
+    border-bottom-left-radius: 64px;
+    cursor: pointer;
+    z-index:1100;
+    display: block;
+    background-color: rgba(194,200,204,.5);
+    padding:32px 0px 0px 29px;
+}
+#btn-left a{
+    display: block;
 }
