@@ -4,17 +4,17 @@ $(function(){
     function showNext(index){
         for(var i=0;i<len;i++){
             var nextIndex;
-            if(index==1){
-                if(i==len-1){
-                    nextIndex=0;
-                }else{
-                    nextIndex=i+1;
-                }
-            }else{
+            if(index==-1){
                 if(i==0){
                     nextIndex=len-1;
                 }else{
                     nextIndex=i-1;
+                }
+            }else{
+                if(i==len-1){
+                    nextIndex=0;
+                }else{
+                    nextIndex=i+1;
                 }
             }
             if($(`#ul-idxs li:eq(${i})`).hasClass("active")){
@@ -27,7 +27,7 @@ $(function(){
                 $("#imgs-box img").css("background-position-y","150px")
                 $("#imgs-box img").animate({
                     "background-position-y":"0px"
-                });
+                },500);
                 break;
             }
         }
@@ -47,22 +47,41 @@ $(function(){
         $("#imgs-box img").css("background-position-y","150px")
         $("#imgs-box img").animate({
             "background-position-y":"0px"
-        });
+        },500);
     }
+    var canClick = true;
     $("#btn-right span").click(function(){
-        clearInterval(timer);
-        showNext(1);
-        timer=setInterval(showNext,4000);
+        if(canClick){
+            canClick = false;
+            setTimeout(function(){
+                canClick = true;
+            },500)
+            clearInterval(timer);
+            showNext(1);
+            timer=setInterval(showNext,4000);
+        }
     });
     $("#btn-left span").click(function(){
-        clearInterval(timer);
-        showNext(-1);
-        timer=setInterval(showNext,4000);
+        if(canClick){
+            canClick = false;
+            setTimeout(function(){
+                canClick = true;
+            },500)
+            clearInterval(timer);
+            showNext(-1);
+            timer=setInterval(showNext,4000);
+        }
     });
     $("#ul-idxs").on("click","a",function(e){
-        var i=$(e.target).parent().index();
-        clearInterval(timer);
-        moveTo(i);
-        timer=setInterval(showNext,4000);
+        if(canClick){
+            canClick = false;
+            setTimeout(function(){
+                canClick = true;
+            },500)
+            var i=$(e.target).parent().index();
+            clearInterval(timer);
+            moveTo(i);
+            timer=setInterval(showNext,4000);
+        }
     })
 })

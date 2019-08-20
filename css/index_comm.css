@@ -4,7 +4,7 @@
     position: relative;
     min-width:1230px;
     height: 750px;
-    background-color:#272727; 
+    background:linear-gradient(to bottom,#272727,#6c7073); 
 }
 #banner a{
     text-decoration: none;
@@ -19,14 +19,12 @@
 #main{
     width: 100%;
     height: 630px;
-    background-color:#272727;
      
 }
 /* 文本框 */
 #text-box{
     width:100%;
     height: 77px;
-    background-color: #272727;
     position: absolute;
     top:150px;
     left:0px;
@@ -38,7 +36,6 @@
 #imgs-box{
     width: 100%;
     height:470px;
-    background-color: lightskyblue;
     position: absolute;
     top:280px;
     left:0px;
@@ -94,16 +91,10 @@
     background: url(../img/img08.png) no-repeat center;
 }
 .img-9 img{
-    background: url(../img/img09.png) no-repeat center;
+    background: url(../img/img12.png) no-repeat center;
 }
 .img-10 img{
-    background: url(../img/img010.png) no-repeat center;
-}
-.img-11 img{
-    background: url(../img/img011.png) no-repeat center;
-}
-.img-1 img{
-    background: url(../img/img01.png) no-repeat center;
+    background: url(../img/img13.png) no-repeat center;
 }
 /* 导航栏 */
 #list-box{
@@ -111,6 +102,7 @@
     position: absolute;
     top:490px;
     left:100px;
+    z-index: 1200;
 }
 #ul-idxs{
     list-style: none;
@@ -122,63 +114,59 @@
     color: #fff;
     cursor: default;
     font-weight: 600;
+    opacity: 0.5;
+    cursor:pointer;
+    transition:font-size .3s linear;
 }
 #ul-idxs li.active a{
     color: #eee;
-}
-#list-box::before{
-    left: 0px;
-    top:123px;
-    position: absolute;
+    font-size:15px;
     display: block;
-    width: 3px;
-    height: 18px;
-    content: '';
-    background-color: #fff;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    background:url(../img/caret-right.png) no-repeat left center;
+    background-size:20px;    
+    opacity:1;
 }
 /* 左键 */
 #btn-left{
-    height: 750px;
-    left:0% ;
+    width:300px;
+    height:100%;
     position: absolute;
+    left:0;top:0;
     z-index:1100;
-    padding-top:200px; 
 }
 /* 右键 */
 #btn-right{
-    height: 750px;
-    left:100% ;
-    margin-left:-64px;
+    width:300px;
+    height:100%;
     position: absolute;
+    right:0;top:0;
     z-index:1100;
-    padding-top:200px;
 }
 /* 左边半圆 */
-#btn-left span{
+#btn-left span,#btn-right span{
     height: 128px;
     width: 64px;
+    position:absolute;
+    top:50%;
+    margin-top:-64px;
+    cursor: pointer;
+    z-index:1100;
+    display:none; 
+}
+#btn-left span{
     border-top-right-radius: 64px;
     border-bottom-right-radius: 64px;
-    cursor: pointer;
-    z-index:1100;
-    display: block;
-    background-color: rgba(194,200,204,.5); 
-    padding-top:32px; 
+    background:rgba(194,200,204,.5) url(../img/left_ar.png) no-repeat left center;
 }
-/* 右边半圆 */
 #btn-right span{
-    height: 128px;
-    width: 64px;
+    right:0;
     border-top-left-radius: 64px;
     border-bottom-left-radius: 64px;
-    cursor: pointer;
-    z-index:1100;
-    display: block;
-    background-color: rgba(194,200,204,.5);
-    padding:32px 0px 0px 29px;
+    background:rgba(194,200,204,.5) url(../img/right_ar.png) no-repeat right center;
 }
-#btn-left a{
+#btn-left:hover span{
+    display: block;
+}
+#btn-right:hover span{
     display: block;
 }
