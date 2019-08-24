@@ -1,3 +1,12 @@
+$(function(){ 
+  $.ajax({
+    url:"header.html",
+    type:"get",
+    success:function(result){
+      $(result).replaceAll("#header");
+      $(`<link rel="stylesheet" href="css/header_comm.css"/>`).appendTo("head");
+    }
+})
 //控制头部的颜色变化停留
 $("#header-site").mouseover(function(){
     $(this).addClass("active");
@@ -82,4 +91,5 @@ $(".navbar-list li:nth-child(6)").mouseover(function(){
 })
 $(".navbar-list li:nth-child(6)").mouseleave(function(){
     $(".nva-columns-box-6").hide();
+})
 })

@@ -1,4 +1,8 @@
 $(function(){
+    $("#imgs-box img").css("background-position-y","150px")
+    $("#imgs-box img").animate({
+        "background-position-y":"0px"
+    },500);
     var len=$("#ul-idxs li").length;
     var timer=setInterval(showNext,4000)
     function showNext(index){
@@ -85,6 +89,37 @@ $(function(){
         }
     })
 })
-$(".lun1 a").mouseover(function(){
-    $(".lun2 a").addClass
+
+
+
+
+$(function(){
+     var L=$("#lun-ul li").length;
+     var Time=setInterval(actionNext,3000);
+     function actionNext(next){
+        for(var i=0;i<L;i++){
+            if($(`#lun-ul li:eq(${i})`).hasClass("active1")){
+            $(`#lun-ul li:eq(${i})`).removeClass("active1")
+            break;
+            }
+        }
+        if(next==-1){
+            if(i==0){i=l}
+            $(`#lun-ul li:eq(${i-1})`).addClass("active1")
+        }else{
+            if(i==L){i=-1;}
+            $(`#lun-ul li:eq(${i+1})`).addClass("active1")
+        }
+    }
+    var canClick=true;
+    $(".RRR").click(function(){
+        clearInterval(Time);
+        actionNext(1);
+        Time=setInterval(actionNext,3000);
+    })
+    $(".LLL").click(function(){
+        clearInterval(Time);
+        actionNext(-1);
+        Time=setInterval(actionNext,3000);
+    })
 })
