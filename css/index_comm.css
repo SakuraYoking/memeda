@@ -257,7 +257,7 @@
     display: block;
     height: 660px;
     width: 580px;
-    background-size: auto 660px
+    background-size: auto 660px;
 }
 .lun2 a{
     background:url("../img/lun2.jpg")no-repeat center;
@@ -375,6 +375,7 @@
     top:100px;
     left:300px;
     display: block;
+    cursor: pointer;
 }
 .p2{
     font-size: 14px;
@@ -384,6 +385,7 @@
     top:140px;
     left:300px;
     display: block;
+    cursor: pointer;
 }
 .p3{
     background: url(../img/s-ruying.svg);
@@ -393,6 +395,7 @@
     position: absolute;
     top:500px;
     left: 40px;
+    cursor: pointer;
 }
 .p4{
     font-size: 14px;
@@ -402,6 +405,7 @@
     top:540px;
     left:40px;
     display: block;
+    cursor: pointer;
 }
 .page-mid{
     padding-top: 40px;
@@ -456,6 +460,7 @@
     top: 220px;
     left: 50px;
     display: block;
+    cursor: pointer;
 }
 .page-bottom{
     padding-bottom: 64px;

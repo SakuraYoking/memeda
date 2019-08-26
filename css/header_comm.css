@@ -386,7 +386,7 @@ body{
     line-height: 48px;
     border-radius: 4px;
     transition: all .3s;
-    font-size: 14px;
+    font-size: 14px !important;
     display:block;
     float: left;
     width: 213PX;
@@ -414,7 +414,7 @@ body{
     position: absolute;
     left:0;
     border-bottom: 1px solid   #dedfe0;
-    display: block;
+    display: none;
 }
 /* 主体样式 */
 .list-box-all-2{
@@ -501,7 +501,7 @@ body{
     position: absolute;
     left:0;
     border-bottom: 1px solid   #dedfe0;
-    display: block;
+    display: none;
 }
 /* 主体样式 */
 .list-box-all-3{
@@ -524,7 +524,7 @@ body{
     position: absolute;
     left:0;
     border-bottom: 1px solid   #dedfe0;
-    display: block;
+    display: none;
 }
 .list-box-all-3{
     background-color:#fff;
@@ -546,17 +546,19 @@ body{
 .nva-columns-box-5{
     background-color:#fff;
     position: absolute;
-    display:block;
+    display:none;
     height: 0px;
     left:-17px;
     overflow:hidden;
     transition: all .3s linear;
+    width: 133px;
 }
-.navbar-list>li:nth-child(5){
+.listAll-5{
     position: relative !important;
 }
-.navbar-list>li:nth-child(5)>a:hover+div{
+.listAll-5:hover>div{
     height:353px;
+    display: block;
 }
 .box5-ul{
     list-style:none;
@@ -578,6 +580,8 @@ body{
     background: 0 0;
     text-align: center;
     width: 100%;
+    font-size:12px !important;
+    font-weight:500 !important;
 }
 /* 第六页 */
 .nva-columns-box-6{
@@ -587,7 +591,7 @@ body{
     position: absolute;
     left:0;
     border-bottom: 1px solid   #dedfe0;
-    display: block;
+    display: none;
 }
 .list-box-all-4{
     background-color:#fff;
