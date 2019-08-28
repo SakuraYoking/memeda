@@ -10,3 +10,34 @@ $(function(){
         console.log("登录")
     })
 })
+    $(function(){
+        var L=$(".ul-img li").length;
+        var Time=setInterval(moveTo,3000);
+        function moveTo(to){
+            for(var i=0;i<L;i++){
+                if($(`.ul-img li:eq(${i})`).hasClass("active")){
+                    $(`.ul-img li:eq(${i})`).removeClass("active");     
+                    $(`.ul-idxs li:eq(${i})`).removeClass("active");
+                    break;
+                }
+            }if(to==-1){
+                if(i==0){i=L}
+                $(`.ul-img li:eq(${i-1})`).addClass("active");
+                $(`.ul-idxs li:eq(${i-1})`).addClass("active");
+            }else{
+            if(i==L-1){i=-1}
+            $(`.ul-img li:eq(${i+1})`).addClass("active");
+            $(`.ul-idxs li:eq(${i+1})`).addClass("active");
+        }
+        }
+        $(".RRR").click(function(){
+            clearInterval(Time);
+            moveTo(1);
+            Time=setInterval(moveTo,3000)
+        })
+        $(".LLL").click(function(){
+            clearInterval(Time);
+            moveTo(-1);
+            Time=setInterval(moveTo,3000)
+        })
+    })

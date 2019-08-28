@@ -100,7 +100,7 @@
 #list-box{
     height: 200px;
     position: absolute;
-    top:490px;
+    top:350px;
     left:100px;
     z-index: 1200;
 }

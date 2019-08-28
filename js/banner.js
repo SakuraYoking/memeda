@@ -104,14 +104,13 @@ $(function(){
             }
         }
         if(next==-1){
-            if(i==0){i=l}
+            if(i==0){i=L}
             $(`#lun-ul li:eq(${i-1})`).addClass("active1")
         }else{
-            if(i==L){i=-1;}
+            if(i==L-1){i=-1}
             $(`#lun-ul li:eq(${i+1})`).addClass("active1")
         }
     }
-    var canClick=true;
     $(".RRR").click(function(){
         clearInterval(Time);
         actionNext(1);
