@@ -1,0 +1,503 @@
+*{margin:0; padding:0;}
+/* 主体 */
+#banner{
+    position: relative;
+    min-width:1230px;
+    height: 750px;
+    background:linear-gradient(to bottom,#272727,#6c7073); 
+}
+#banner a{
+    text-decoration: none;
+}
+/* 总框 */
+#big-box{
+    width: 100%;
+    height: 100%;
+    padding-top:120px; 
+}
+/* 主体框 */
+#main{
+    width: 100%;
+    height: 630px;
+     
+}
+/* 文本框 */
+#text-box{
+    width:100%;
+    height: 77px;
+    position: absolute;
+    top:150px;
+    left:0px;
+    z-index: 2000;
+}
+#text-box li{display:none;}
+#text-box li.active{display:block;}
+/* 图片框 */
+#imgs-box{
+    width: 100%;
+    height:470px;
+    position: absolute;
+    top:280px;
+    left:0px;
+}
+
+/* 文本图片 */
+.text-img{
+    margin:0 auto;
+    height: 36px;
+    display:block;
+}
+/* 文字样式 */
+.words{
+    color: #ffffff; 
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 8px;
+}
+#imgs-box a{display:block;height:100%;}
+#imgs-box li{display:none;height:470px}
+#imgs-box li.active{display: block;}
+/* 图片样式 */
+#imgs-box img{
+    display: block;
+    height:100%;
+    margin: 0 auto;
+    background-size:auto 470px;
+    background-position-y: 150px;
+}
+.img-1 img{
+    background: url(../img/img01.png) no-repeat center;
+}
+.img-2 img{
+    background: url(../img/img02.png) no-repeat center;
+}
+.img-3 img{
+    background: url(../img/img03.png) no-repeat center;
+}
+.img-4 img{
+    background: url(../img/img04.png) no-repeat center;
+}
+.img-5 img{
+    background: url(../img/img05.png) no-repeat center;
+}
+.img-6 img{
+    background: url(../img/img06.png) no-repeat center;
+}
+.img-7 img{
+    background: url(../img/img07.png) no-repeat center;
+}
+.img-8 img{
+    background: url(../img/img08.png) no-repeat center;
+}
+.img-9 img{
+    background: url(../img/img12.png) no-repeat center;
+}
+.img-10 img{
+    background: url(../img/img13.png) no-repeat center;
+}
+/* 导航栏 */
+#list-box{
+    height: 200px;
+    position: absolute;
+    top:450px;
+    left:100px;
+    z-index: 1200;
+}
+#ul-idxs{
+    list-style: none;
+    margin:0px;
+}
+#ul-idxs li a{
+    padding: 6px 40px;
+    font-size: 14px;
+    color: #fff;
+    cursor: default;
+    font-weight: 600;
+    opacity: 0.5;
+    cursor:pointer;
+    transition:font-size .3s linear;
+}
+#ul-idxs li.active a{
+    color: #eee;
+    font-size:15px;
+    display: block;
+    background:url(../img/caret-right.png) no-repeat left center;
+    background-size:20px;    
+    opacity:1;
+}
+/* 左键 */
+#btn-left{
+    width:300px;
+    height:100%;
+    position: absolute;
+    left:0;top:0;
+    z-index:1100;
+}
+/* 右键 */
+#btn-right{
+    width:300px;
+    height:100%;
+    position: absolute;
+    right:0;top:0;
+    z-index:1100;
+}
+/* 左边半圆 */
+#btn-left span,#btn-right span{
+    height: 128px;
+    width: 64px;
+    position:absolute;
+    top:50%;
+    margin-top:-64px;
+    cursor: pointer;
+    z-index:1100;
+    display:none; 
+}
+#btn-left span{
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+    background:rgba(194,200,204,.5) url(../img/left_ar.png) no-repeat left center;
+}
+#btn-right span{
+    right:0;
+    border-top-left-radius: 64px;
+    border-bottom-left-radius: 64px;
+    background:rgba(194,200,204,.5) url(../img/right_ar.png) no-repeat right center;
+}
+#btn-left:hover span{
+    display: block;
+}
+#btn-right:hover span{
+    display: block;
+}
+/* 产品介绍主页 */
+#productpage{
+    min-width: 1230px;
+    height: 1306px;
+    background-color: #f2f2f2;
+}
+.page-top{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    height: 700px;
+}
+.page-top>div{
+    position: relative;
+    padding: 0px 10px;
+}
+/* 轮播图 */
+.action ul{
+    list-style: none;
+    overflow: hidden;
+    height: 100%;
+}
+.action ul li{
+    position: absolute;
+    top:0px;
+    z-index:-1;
+}
+.action ul li:first-child{
+    z-index:100;
+}
+.action li.active1{
+    z-index: 1000;
+    position: absolute;
+}
+/* .action li.active2{
+    position: absolute;
+    top:-10px;
+    z-index: 750;
+    margin-left: 10px;
+}
+.action li.active2 a{
+   width: 560px;
+}
+
+.action li.active3{
+    position: absolute;
+    top:-20px;
+    z-index:500 ;
+    margin-left: 20px;
+}
+.action li.active3 a{
+   width: 540px;
+} */
+.btn-LR{
+    width: 100%;
+    height: 100%;
+    z-index: 1500;
+    position: relative;
+}
+.LLL{
+    background:url(../img/LLL.png) no-repeat left center;
+    display:none;
+    position: absolute;
+    width:100px;
+    height: 660px;
+    left:15px;
+    z-index: 1500;
+}
+.RRR{
+    background:url(../img/RRR.png) no-repeat right center;
+    display: none;
+    position: absolute;
+    width:100px;
+    height: 660px;
+    right:0%;
+    margin-right:17px; 
+    z-index: 1500;
+}
+.btn-LR:hover span{
+    display: block;
+}
+
+.lun1 a{
+    background:url("../img/lun1.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun2 a{
+    background:url("../img/lun2.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun3 a{
+    background:url("../img/lun3.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun4 a{
+    background:url("../img/lun4.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun5 a{
+    background:url("../img/lun5.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun6 a{
+    background:url("../img/lun6.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun7 a{
+    background:url("../img/lun7.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun8 a{
+    background:url("../img/lun8.png")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun9 a{
+    background:url("../img/lun9.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun10 a{
+    background:url("../img/lun10.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun11 a{
+    background:url("../img/lun11.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.lun12 a{
+    background:url("../img/lun12.jpg")no-repeat center;
+    display: block;
+    height: 660px;
+    width: 580px;
+    background-size: auto 660px;
+}
+.t-top,.t-bottom{
+    width: 100%;
+    height: 320px; 
+} 
+.t-top{
+    margin-bottom:20px;
+}
+.t-top a{
+    background: url(../img/p1.jpg);
+    background-size:cover; 
+    height: 100%;
+    width: 100%;
+    display: block; 
+    padding:0;
+    transition: all 0.3s linear;
+}
+.t-top a:hover{
+    transform: scale(1.03,1.03);
+}
+.t-bottom a{
+    background: url(../img/p2.jpg);
+    background-size:cover; 
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding:0;
+    transition: all 0.3s linear;
+} 
+.t-bottom a:hover{
+    transform: scale(1.03,1.03);
+}
+.p1{
+    font-size: 26px;
+    font-weight: 600;
+    position: absolute;
+    color:#fff;
+    top:100px;
+    left:300px;
+    display: block;
+    cursor: pointer;
+}
+.p2{
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    color:#fff;
+    top:140px;
+    left:300px;
+    display: block;
+    cursor: pointer;
+}
+.p3{
+    background: url(../img/s-ruying.svg);
+    display:block;
+    width: 205px;
+    height: 26px;
+    position: absolute;
+    top:500px;
+    left: 40px;
+    cursor: pointer;
+}
+.p4{
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    color:black;
+    top:540px;
+    left:40px;
+    display: block;
+    cursor: pointer;
+}
+.page-mid{
+    padding-top: 40px;
+    width: 1200px;
+    margin: 0 auto;
+    height: 336px;
+}
+.page-mid div{
+    padding:0 10px;
+    position: relative;
+}
+.cm1 a{
+    background: url(../img/p3.png);
+    background-size:cover; 
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 0px;
+    transition: all 0.3s linear;
+}
+.cm1 a:hover{
+    transform: scale(1.03,1.03);
+}
+.cm2 a{
+    background: url(../img/p4.jpg);
+    background-size:cover; 
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 0px;
+    transition: all 0.3s linear;
+}
+.cm2 a:hover{
+    transform: scale(1.03,1.03);
+}
+.page-mid h3{
+   position: absolute;
+   top: 175px;
+   left: 50px;
+}
+.page-mid span{
+    background: url(../img/right.png) no-repeat;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    position: absolute;
+    top: 178px;
+    left: 225px;
+}
+.p5{
+    position: absolute;
+    top: 220px;
+    left: 50px;
+    display: block;
+    cursor: pointer;
+}
+.page-bottom{
+    padding-bottom: 64px;
+    padding-top: 40px;
+    width: 1180px;
+    margin: 0 auto;
+    height: 270px;
+   
+}
+.p-list{
+    padding:0px 10px !important;
+    background-color:#fff; 
+    position: relative;
+    box-sizing: border-box;
+    border-left:1px solid #eeeeee;
+}
+.p-list::before{
+    border:2px solid #d3d5d6;
+    height: 50px;
+    display: block;
+    content: "";
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    top:50%;
+    margin-top:-25px;
+    left:0;
+}
+.p-list:hover::before{
+    border:2px solid #272727;
+}
+.p-list>div{
+    position: absolute;
+    top:50px;
+    left:80px;
+}
+.p-list a{
+    text-decoration: none;
+    color: #272727;
+}

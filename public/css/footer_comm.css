@@ -1,0 +1,132 @@
+@charset "UTF-8";
+*{margin:0; padding:0}
+#site-footer{
+    background:#272727;padding:72px 0;
+    height:649px;   
+}
+body{
+     min-width: 1230px;
+     position: relative;    
+    }
+.grid-container{
+    margin:0 auto;
+    width:1200px;
+    height: 360px;
+    background: #272727;
+}
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+			position: relative;
+			min-height: 1px;
+		}
+.col-xs-1-5 {
+			width: 20%;
+			float: left;
+        }
+.footer-item{
+    height: 360px;
+}
+p{
+    display:block
+}
+.title{color: #fff;
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;}
+.nva-item{
+    margin-bottom:8px;
+}
+#site-footer a{
+    font-size: 12px;
+    color: #9fa3a6;
+    transition: all .3s ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+    line-height: 24px;
+    display: block;
+    text-decoration: none;
+} 
+#site-footer a:hover{color:#fff ;font-size:13px;font-weight: 700;} */
+li{
+    list-style: none;
+}
+.form-input{
+    float:left;
+    height: 22px;
+    padding: 4px 0px 4px 12px;
+    background:#272727;
+    border:1px solid #9fa3a6;
+    font-size: 14px;
+    width: 189px;
+    color: #9fa3a6;
+}
+div.clear-fixed{line-height:22px;}
+.search-icon{
+    float:left;
+    width: 22px;height: 22px;
+    border:0;outline:0 !important;
+    font-weight:1000;
+    line-height: 22px;
+    font-size:14px;
+    background: #9fa3a6;
+    color:#272727;
+}
+.search-icon:hover{cursor: pointer;}
+.footer-bottom-A{
+    width: 1200px; 
+    border-bottom: 1px solid #9fa3a6;
+    margin:0 auto;
+}
+.footer-bottom-box{
+    height: 24px;
+    width: 1200px;
+    padding:44px;
+}
+.footer-bottom-clear{
+    clear: both;
+}
+.footer-bottom-li{
+    display: inline-block;
+    padding:0px 12px 0px 12px;
+    line-height: 24px;
+}
+.footer-bottom-ul{
+    float: left;
+}
+.footer-bottom-img{
+    float: left;
+}
+.footer-otherlogo-a{
+    height: 16px;
+    width:40px;
+    margin:0 10px;
+}
+.footer-otherlogo-a:hover{cursor: pointer;}
+.footer-otherlogo-b{
+    height: 16px;
+    width:16px;
+    margin:0 10px;
+}
+.footer-otherlogo-b:hover{cursor: pointer;}
+.footer-img{
+  float:right;
+}
+.footer-bottom-B{
+    margin:0 auto;
+    width: 1200px;
+}
+.footer-bottom-B-ul{
+    display: inline-block;
+}
+.footer-bottom-B-li{
+    display: inline-block;
+}
+span{
+    color: #9fa3a6;
+    font-size: 14px;
+}
