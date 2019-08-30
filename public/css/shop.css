@@ -51,10 +51,11 @@
     box-sizing: border-box;
 }
 .pro1-4-b{
-    height: 426px;
-    width: 221px;
+    height: 474px;
+    width: 285px;
     padding: 24px 32px;
     background-color:#fff;
+    position: relative;
 }
 .pro1-4-b>ul{
     display: block; 
@@ -62,18 +63,21 @@
     height: 100%; 
 }
 .pro1-4-b>ul>li>a{
-   font-size: 24px;
+   font-size: 18px;
    color:#000;
    display: inline-block;
    margin:10px 0;
    text-decoration: none;
+   width: 100%;
+   height: 32px;
+   line-height: 32px;
 }
-.pro1-4-b>ul>li>span{
-    background: url(../img/right.png)no-repeat;
-    height: 32px;
-    width: 32px;
-    display: inline-block;
-    position: absolute;
+.pro1-4-b>ul>li>a.active{
+    background: url(../img/shop/right.svg)no-repeat;
+    background-size: 16px;
+    background-position-x:180px; 
+    background-position-y:8px;
+    font-weight: 600;
 }
 .pro3-4{
     flex-basis: 75%;
@@ -82,7 +86,73 @@
 }
 .pro-pic-L{
     flex-basis:50%;
+    padding-right:10px; 
+    box-sizing: border-box;
 }
 .pro-pic-R{
     flex-basis: 50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+/* 图片框 */
+.ppb{
+    height: 474px;
+    margin-bottom: 20px;
+    background-color:#fff; 
+}
+.ppb-t-1{
+    margin: 0 auto;
+    width: 270px;
+    height: 270px;
+    background: url(../img/shop/01.jpg) no-repeat center;
+    background-size:cover;
+}
+.ppb-t-2{
+    margin: 0 auto;
+    width: 270px;
+    height: 270px;
+    background: url(../img/shop/02.jpg) no-repeat center;
+    background-size:cover;
+}
+.ppb-b{
+    padding: 6px 32px 32px;
+}
+.ppb-b h3{
+    margin-bottom: 16px;
+}
+.ppb-b p{
+    margin-bottom: 32px;
+}
+.buy-btn{
+    display: inline-block;
+    height: 46px;
+    font-size:16px;
+    padding: 15px 32px;
+    text-decoration: none;
+    background-color:#171717; 
+    color: #fff;
+    line-height: 16px;
+    border-radius: 2px;
+    margin-right: 40px;
+}
+.buy-btn:hover{
+    background-color: #363636;
+    text-decoration: none;
+    color: #fff;
+}
+.more-btn{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 46px;
+    height: 46px;
+    width: 150px;
+    color: #171717;
+    text-decoration: none;
+    background: url(../img/shop/right.svg) no-repeat;
+    background-position-x:70px; 
+    background-position-y: 15px;
+}
+.more-btn:hover{
+    color: #6e6c6c;
 }

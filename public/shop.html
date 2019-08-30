@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="css/shop.css"/>
 </head>
 <body>
+    <header id="header"></header>
     <div class="pic-box">
         <div class="pic-text">
             <div class="pic-text-box">
@@ -26,20 +28,43 @@
                 <div class="pro1-4">
                     <div class="pro1-4-b">
                         <ul>
-                            <li><a href="">集成系统</a><span></span></li>
-                            <li><a href="">云台相机</a><span></span></li>
-                            <li><a href="">摄像增稳系统</a><span></span></li>
-                            <li><a href="">专业配件</a><span></span></li>
+                            <li><a class="active" href="javascript:;">集成系统</a></li>
+                            <li><a href="javascript:;">云台相机</a></li>
+                            <li><a href="javascript:;">摄像增稳系统</a></li>
+                            <li><a href="javascript:;">专业配件</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="pro3-4">
-                    <div class="pro-pic-L"></div>
-                    <div class="pro-pic-R"></div>
+                    <div class="pro-pic-L">
+                        <div class="ppb">
+                            <a href=""><div class="ppb-t-1"></div></a>
+                            <div class="ppb-b">
+                                <h3>悟 Inspire 2</h3>
+                                <p>出色的成像质量、强悍的飞行能力，为专业影视制作而生。</p>
+                                <a class="buy-btn" href="">立即购买</a>
+                                <a class="more-btn" href="">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro-pic-R">
+                        <div class="ppb">
+                             <a href=""><div class="ppb-t-2"></div></a>
+                             <div class="ppb-b">
+                             <h3>灵眸 Osmo Pro/RAW</h3>
+                            <p>M4/3传感器、工业级云台，拍摄1600万像素照片和专业4K视频。</p>
+                            <a class="buy-btn" href="">立即购买</a>
+                            <a class="more-btn" href="">了解更多</a>
+                        </div>
+                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <footer id="footer"></footer>
+    <script src="js/shop.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>
