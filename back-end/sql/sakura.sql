@@ -13,7 +13,7 @@ uname_user   VARCHAR(32),#用户ID，如天青色等烟雨
 gender   INT   #0-女，1-男
 );
 INSERT INTO memeda_user VALUES
-(1,"xinxinxin","cxzaq7410","123456789@qq.com","5573451","Hook","1");
+(1,"james","cxzaq7410","625270910@qq.com","18081339067","Hook","1");
 SHOW TABLES;
 DESC memeda_user;
 select * from memeda_user;
