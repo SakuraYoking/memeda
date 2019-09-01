@@ -88,10 +88,8 @@ $(function(){
             timer=setInterval(showNext,4000);
         }
     })
+
 })
-
-
-
 
 $(function(){
      var L=$("#lun-ul li").length;

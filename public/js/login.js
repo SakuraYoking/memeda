@@ -40,4 +40,17 @@ $(function(){
             moveTo(-1);
             Time=setInterval(moveTo,3000)
         })
+        $.ajax({
+            url:'http://127.0.0.1:8080/user/login',
+            type:'post',
+            data:{
+                uname:'james',
+                upwd:'cxzaq74'
+            },
+            success:function(res){
+                if(res="登陆成功"){
+                    alert('登陆成功')
+                }
+            }
+        })
     })

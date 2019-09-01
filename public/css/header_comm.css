@@ -553,6 +553,7 @@ body{
     overflow:hidden;
     transition: all .3s linear;
     width: 133px;
+    border: 0.5px solid #babdbf;
 }
 .listAll-5{
     position: relative !important;
@@ -563,7 +564,6 @@ body{
 }
 .box5-ul{
     list-style:none;
-    border: 1px solid   #dedfe0; 
 }
 .box5-ul li{
     display: block;

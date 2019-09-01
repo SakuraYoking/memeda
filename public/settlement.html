@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/settlement.css"/>
 </head>
 <body>
+    <header id="header"></header>
     <div class="settlement">
         <div class="settlement-box">
             <h1>我的购物车</h1>
@@ -25,9 +26,48 @@
             <div class="box-line"></div>
             <div class="mycart">
                 <input class="mycart-checkbox" type="checkbox">
-                <div class="mycart-img"></div>
+                <div class="mycart-img"><a href=""></a></div>
+                <div class="mycart-text">
+                    <a href=""><h3>"悟" Inspire 2</h3></a>
+                    <p>发货时间为订单付款后一个工作日</p>
+                </div>
+                <div class="mycart-price">￥19999</div>
+                <div class="mycart-count">
+                    <button class="btn-reduce"><i >-</i></button>
+                    <input type="text" value="1" disabled>
+                    <button class="btn-add"><i>+</i>
+                    </button>
+                </div>
+                <div class="total-price">
+                    ￥19999
+                </div>
+                <a href=""><div class="mycart-delete"></div></a>
+            </div>
+            <div class="mycart-bottom">
+                <span class="money"></span>
+                <div class="my-b-text">
+                <p>购买即可获得价值支付金额1%的DJI币返利 - 购买越多，返利越多。</p>
+                <a href="">了解更多优惠详情></a>
+                </div>
+                <h3>总计（不包括运费）：￥19999</h3>
+            </div>
+            <div class="mycart-bottom-2">
+                <span class="data"></span>
+                <div class="my-b-text">
+                <p>有优惠券或者 DJI 币？</p>
+                <p>您可以在结账的时候使用优惠券或者 DJI 币抵扣。</p>
+                </div>
+                <p>邮费:免费(支持支付宝、微信、银联、花呗和招行分期。)</p>
+            </div>
+            <div class="end-line"></div>
+            <div class="end-box">
+                <a href=""><div class="end-left-btn">继续购物</div></a>
+                <a href=""><div class="end-right-btn">去结算</div></a>
             </div>
         </div>
     </div>
+    <footer id="footer"></footer>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>

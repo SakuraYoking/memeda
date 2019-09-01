@@ -79,21 +79,31 @@
     background-position-y:8px;
     font-weight: 600;
 }
-.pro3-4{
+#pro-list{
     flex-basis: 75%;
     padding: 0 10px;
     display: flex;
+    flex-wrap: wrap;
 }
-.pro-pic-L{
+.pro3-4{
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    display: none;
+}
+.pro3-4.active{
+    display:flex;
+}
+.pro-pic{
     flex-basis:50%;
-    padding-right:10px; 
     box-sizing: border-box;
+    padding:0px 10px;
 }
-.pro-pic-R{
+/* .pro-pic-R{
     flex-basis: 50%;
     padding-left: 10px;
     box-sizing: border-box;
-}
+} */
 /* 图片框 */
 .ppb{
     height: 474px;
@@ -104,8 +114,12 @@
     margin: 0 auto;
     width: 270px;
     height: 270px;
-    background: url(../img/shop/01.jpg) no-repeat center;
-    background-size:cover;
+    /* background: url(../img/shop/01.jpg) no-repeat center;
+    background-size:cover; */
+}
+.ppb-t-1>img{
+    width: 270px;
+    height: 270px;
 }
 .ppb-t-2{
     margin: 0 auto;
