@@ -1,8 +1,4 @@
 $(function(){
-    $("#imgs-box img").css("background-position-y","150px")
-    $("#imgs-box img").animate({
-        "background-position-y":"0px"
-    },500);
     var len=$("#ul-idxs li").length;
     var timer=setInterval(showNext,4000)
     function showNext(index){
@@ -28,9 +24,9 @@ $(function(){
                 $(`#text-box li:eq(${nextIndex})`).addClass("active");
                 $(`#imgs-box li:eq(${i})`).removeClass("active");
                 $(`#imgs-box li:eq(${nextIndex})`).addClass("active");
-                $("#imgs-box img").css("background-position-y","150px")
+                $("#imgs-box img").css("top","150px")
                 $("#imgs-box img").animate({
-                    "background-position-y":"0px"
+                    "top":"0px"
                 },500);
                 break;
             }
@@ -48,9 +44,9 @@ $(function(){
         $(`#ul-idxs li:eq(${index})`).addClass("active");
         $(`#text-box li:eq(${index})`).addClass("active");
         $(`#imgs-box li:eq(${index})`).addClass("active");
-        $("#imgs-box img").css("background-position-y","150px")
+        $("#imgs-box img").css("top","150px")
         $("#imgs-box img").animate({
-            "background-position-y":"0px"
+            "top":"0px"
         },500);
     }
     var canClick = true;

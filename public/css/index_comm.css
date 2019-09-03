@@ -39,6 +39,7 @@
     position: absolute;
     top:280px;
     left:0px;
+    overflow: hidden;
 }
 
 /* 文本图片 */
@@ -62,11 +63,14 @@
 #imgs-box img{
     display: block;
     height:100%;
-    margin: 0 auto;
-    background-size:auto 470px;
-    background-position-y: 150px;
+    left:50%;
+    transform: translateX(-50%); 
+    top:150px;
+    position: absolute;
+    /* background-size:auto 470px;
+    background-position-y: 150px; */
 }
-.img-1 img{
+/* .img-1 img{
     background: url(../img/img01.png) no-repeat center;
 }
 .img-2 img{
@@ -95,7 +99,7 @@
 }
 .img-10 img{
     background: url(../img/img13.png) no-repeat center;
-}
+} */
 /* 导航栏 */
 #list-box{
     height: 200px;

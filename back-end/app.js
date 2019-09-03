@@ -1,7 +1,8 @@
 const express=require('express');
 //引入路由
 const userRouter=require('./router/user');
-const proRouter=require('./router/product')
+const proRouter=require('./router/product');
+const index=require('./router/index');
 //引入body-parser中间件
 const bodyParser=require('body-parser');
 var app=express();
@@ -14,5 +15,6 @@ app.use(bodyParser.urlencoded({
 }))
 //使用路由器
 app.use('/user',userRouter);
-app.use('/product',proRouter)
+app.use('/product',proRouter);
+app.use('/index',index);
 
