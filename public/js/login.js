@@ -40,17 +40,25 @@ $(function(){
             moveTo(-1);
             Time=setInterval(moveTo,3000)
         })
-        $.ajax({
-            url:'http://127.0.0.1:8080/user/login',
-            type:'post',
-            data:{
-                uname:'james',
-                upwd:'cxzaq74'
-            },
-            success:function(res){
-                if(res="登陆成功"){
-                    alert('登陆成功')
-                }
-            }
-        })
     })
+
+
+    $(".btn-login").click(function(){
+    var phone=$(".ajax-1>input:eq(0)").val();
+    console.log(phone);
+    var upwd=$(".ajax-1>input:eq(1)").val();
+    console.log(upwd)
+    $.ajax({
+        url:'http://127.0.0.1:8080/user/login',
+        type:'post',
+        data:{
+            phone:phone,
+            upwd:upwd,
+            email:phone,
+        },
+        dataType:"json",
+     }).then(result=>{
+        console.log(result);
+     })
+    })
+    

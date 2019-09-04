@@ -8,14 +8,22 @@ router.post('/login',(req,res)=>{//获取登录传递过来的值
 //获取数据
 var sql=req.body
 //验证数据是否为正确
-pool.query('select * from memeda_user where uname=? and upwd=?',[sql.uname,sql.upwd],function(err,result){
+
+if(!sql.phone&&!sql.email){
+    res.send({code:401,msg:'phone or email required'});
+		return;
+}else if(!sql.upwd){
+    res.send({code:401,msg:'upwd required'});
+    return;
+}
+pool.query('select * from memeda_user where (phone=? or email=?) and upwd=?',[sql.phone,sql.email,sql.upwd],function(err,result){
     if(err) throw err;
     console.log(result);
     //判断数据长度是否大于0
     if(result.length>0){
-        res.send("登录成功")
+        res.send({code:200,msg:'登录成功'})
     }else{
-        res.send("登录失败")
+        res.send({code:401,msg:'登录失败'})
     }
 })
 })
@@ -40,7 +48,7 @@ router.post('/reg',(req,res)=>{
             var sql;
             var reg=/\d{11}/;
             if(reg.test(uname)){
-                sql="insert into memeda_user(phone,upwd,user_name values(?,?,?)"
+                sql="insert into memeda_user(phone,upwd,user_name) values(?,?,?)"
             }else{
                 sql="insert into memeda_user(email,upwd,user_name) values(?,?,?)"
             }
