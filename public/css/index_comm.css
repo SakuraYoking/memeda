@@ -67,39 +67,7 @@
     transform: translateX(-50%); 
     top:150px;
     position: absolute;
-    /* background-size:auto 470px;
-    background-position-y: 150px; */
 }
-/* .img-1 img{
-    background: url(../img/img01.png) no-repeat center;
-}
-.img-2 img{
-    background: url(../img/img02.png) no-repeat center;
-}
-.img-3 img{
-    background: url(../img/img03.png) no-repeat center;
-}
-.img-4 img{
-    background: url(../img/img04.png) no-repeat center;
-}
-.img-5 img{
-    background: url(../img/img05.png) no-repeat center;
-}
-.img-6 img{
-    background: url(../img/img06.png) no-repeat center;
-}
-.img-7 img{
-    background: url(../img/img07.png) no-repeat center;
-}
-.img-8 img{
-    background: url(../img/img08.png) no-repeat center;
-}
-.img-9 img{
-    background: url(../img/img12.png) no-repeat center;
-}
-.img-10 img{
-    background: url(../img/img13.png) no-repeat center;
-} */
 /* 导航栏 */
 #list-box{
     height: 200px;
@@ -208,25 +176,7 @@
     z-index: 1000;
     position: absolute;
 }
-/* .action li.active2{
-    position: absolute;
-    top:-10px;
-    z-index: 750;
-    margin-left: 10px;
-}
-.action li.active2 a{
-   width: 560px;
-}
 
-.action li.active3{
-    position: absolute;
-    top:-20px;
-    z-index:500 ;
-    margin-left: 20px;
-}
-.action li.active3 a{
-   width: 540px;
-} */
 .btn-LR{
     width: 100%;
     height: 100%;
@@ -263,83 +213,6 @@
     width: 580px;
     background-size: auto 660px;
 }
-/* .lun2 a{
-    background:url("../img/lun2.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun3 a{
-    background:url("../img/lun3.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun4 a{
-    background:url("../img/lun4.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun5 a{
-    background:url("../img/lun5.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun6 a{
-    background:url("../img/lun6.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun7 a{
-    background:url("../img/lun7.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun8 a{
-    background:url("../img/lun8.png")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun9 a{
-    background:url("../img/lun9.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun10 a{
-    background:url("../img/lun10.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun11 a{
-    background:url("../img/lun11.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-}
-.lun12 a{
-    background:url("../img/lun12.jpg")no-repeat center;
-    display: block;
-    height: 660px;
-    width: 580px;
-    background-size: auto 660px;
-} */
 .t-top,.t-bottom{
     width: 100%;
     height: 320px; 
