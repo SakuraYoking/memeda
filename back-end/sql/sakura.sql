@@ -37,12 +37,12 @@ INSERT INTO memeda_carouse VALUES(NULL,"/img/img08.png","/img/air.svg","随行�
 INSERT INTO memeda_carouse VALUES(NULL,"/img/img12.png","/img/t16.svg","大，有可为","T16 植保无人飞机");
 INSERT INTO memeda_carouse VALUES(NULL,"/img/img13.png","/img/ling.svg","转动随心，灵感不停","灵眸 Osmo 口袋云台相机");
 
-/**主页其他图片**/
-CREATE TABLE index-pic (
+/**主页小轮播图图片**/
+CREATE TABLE index_pic(
     uid INT PRIMARY KEY AUTO_INCREMENT,
-    pic VARCHAR(32),
+    pic VARCHAR(255),
     title VARCHAR(32),
     text VARCHAR(32),
     list  VARCHAR(32) 
 );
-INSERT INTO index-pic VALUES(NULL,"")
+INSERT INTO index_pic VALUES(NULL,"/img/lun1.jpg, /img/lun2.jpg, /img/lun3.jpg, /img/lun4.jpg, /img/lun5.jpg,/img/lun6.jpg, /img/lun7.jpg, /img/lun8.png, /img/lun9.jpg, /img/lun10.jpg, /img/lun11.jpg, /img/lun12.jpg",NULL,NULL,NULL);

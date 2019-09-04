@@ -7,7 +7,7 @@ $(function(){
        console.log(result);
        var L=result.length;
        var p=$("#carouse-tt");
-       var y=$("#carouse-c");
+       var y=$("#carouse-c"); 
        var li=$("#ul-idxs");
        console.log(p);
        console.log(L);
@@ -36,6 +36,7 @@ $(function(){
        $(p.children()[0]).addClass("active");
        $(y.children()[0]).addClass("active");
        $(li.children()[0]).addClass("active");
+
 
        var len=$("#ul-idxs li").length;
        var timer=setInterval(showNext,4000)
@@ -122,37 +123,59 @@ $(function(){
                timer=setInterval(showNext,4000);
            }
        })
-   
-   })
-   
-   $(function(){
+   }) 
+})
+
+
+
+
+
+$(function(){
+    $.ajax({
+        url:"http://127.0.0.1:8080/index/other",
+        type:"get",
+        dataType:"json",        
+    }).then(result=>{
+        console.log(result);
+        var len=result.length;
+        console.log(len);
+        var pic=result[0].pic.split(",");
+        console.log(pic);
+        var lens=pic.length;
+        var lun="";
+        for(var i=0;i<lens;i++){
+            lun+=`<li class="lun1"><a href="" style="background:url('${pic[i]}') no-repeat center; background-size:100% 100%"><div></div></a></li>`;
+        }
+        console.log(lun);
+        $("#lun-ul").html(lun);
+        $($("#lun-ul").children()[0]).addClass("active1");    
         var L=$("#lun-ul li").length;
         var Time=setInterval(actionNext,3000);
-        function actionNext(next){
-           for(var i=0;i<L;i++){
-               if($(`#lun-ul li:eq(${i})`).hasClass("active1")){
-               $(`#lun-ul li:eq(${i})`).removeClass("active1")
-               break;
-               }
-           }
-           if(next==-1){
-               if(i==0){i=L}
-               $(`#lun-ul li:eq(${i-1})`).addClass("active1")
-           }else{
-               if(i==L-1){i=-1}
-               $(`#lun-ul li:eq(${i+1})`).addClass("active1")
-           }
-       }
-       $(".RRR").click(function(){
-           clearInterval(Time);
-           actionNext(1);
-           Time=setInterval(actionNext,3000);
-       })
-       $(".LLL").click(function(){
-           clearInterval(Time);
-           actionNext(-1);
-           Time=setInterval(actionNext,3000);
-       })
-       
-    })
+            function actionNext(next){
+                for(var i=0;i<L;i++){
+                    if($(`#lun-ul li:eq(${i})`).hasClass("active1")){
+                    $(`#lun-ul li:eq(${i})`).removeClass("active1")
+                    break;
+                    }
+                }
+                if(next==-1){
+                    if(i==0){i=L}
+                    $(`#lun-ul li:eq(${i-1})`).addClass("active1")
+                }else{
+                    if(i==L-1){i=-1}
+                    $(`#lun-ul li:eq(${i+1})`).addClass("active1")
+                }
+            }
+                $(".RRR").click(function(){
+                    clearInterval(Time);
+                    actionNext(1);
+                    Time=setInterval(actionNext,3000);
+                })
+                $(".LLL").click(function(){
+                    clearInterval(Time);
+                    actionNext(-1);
+                    Time=setInterval(actionNext,3000);
+                })
+            })    
 })
+
