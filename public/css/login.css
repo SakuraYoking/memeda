@@ -231,7 +231,7 @@ body{
     height: 390px;
     padding-top:20px ;
 }
-.btn-login{
+.btn-login,.btn-submit{
     width: 100%;
     height: 48px;
     display: block;
@@ -243,6 +243,7 @@ body{
     border:0;
     color: #fff;
 }
+
 .child input{
     display: block;
     width: 100%;

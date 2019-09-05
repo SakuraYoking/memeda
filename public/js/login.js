@@ -59,6 +59,38 @@ $(function(){
         dataType:"json",
      }).then(result=>{
         console.log(result);
+        var msg=result.code;
+        if(msg=="401"){
+            $(".msg-p").css("display","block");
+        }else if(msg=="402"){
+            $(".msg-p1").css("display","block");
+        }else if(msg=="403"){
+            alert("登录失败：账号或密码错误");
+        }else{
+            alert("登录成功");
+            window.location.href="http://127.0.0.1:8080/index.html"
+        }
      })
+    })
+
+    $(".btn-submit").click(function(){
+        var uname=$(".form-2>input:eq(0)").val();
+        var upwd=$(".form-2>input:eq(1)").val();
+        var upwd1=$(".form-2>input:eq(2)").val();
+        $.ajax({
+            url:'http://127.0.0.1:8080/user/reg',
+            type:'post',
+            data:{
+                phone:uname,
+                upwd:upwd,
+                email:uname,
+            },
+            dataType:"json",
+         }).then(result=>{
+            console.log(result);
+            var msg=result.code;
+            console.log(msg)
+            // if(){}
+         })
     })
     
