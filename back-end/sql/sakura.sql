@@ -46,3 +46,34 @@ CREATE TABLE index_pic(
     list  VARCHAR(32) 
 );
 INSERT INTO index_pic VALUES(NULL,"/img/lun1.jpg, /img/lun2.jpg, /img/lun3.jpg, /img/lun4.jpg, /img/lun5.jpg,/img/lun6.jpg, /img/lun7.jpg, /img/lun8.png, /img/lun9.jpg, /img/lun10.jpg, /img/lun11.jpg, /img/lun12.jpg",NULL,NULL,NULL);
+
+
+/*shop列表*/
+CREATE TABLE dj_product(
+    uid INT PRIMARY KEY AUTO_INCREMENT,
+    lid  INT(12),
+    img VARCHAR(255),
+    title VARCHAR(32),
+    subtitle VARCHAR(255)     
+);
+INSERT INTO dj_product VALUES(NULL,1,"/img/shop/01.jpg","悟 Inspire 2","出色的成像质量、强悍的飞行能力，为专业影视制作而生。");
+INSERT INTO dj_product VALUES(NULL,1,"/img/shop/02.jpg","灵眸 Osmo Pro/RAW","M4/3传感器、工业级云台，拍摄1600万像素照片和专业4K视频。");
+INSERT INTO dj_product VALUES(NULL,1,"/img/shop/03.jpg","悟 Inspire 1 Pro/RAW","M4/3相机出色的影像性能，开启专业级航拍的全新时代。");
+INSERT INTO dj_product VALUES(NULL,1,"/img/shop/04.jpg","悟 Inspire 1","DJI 的核心技术融合，简易的飞行平台，带给您难忘体验。");
+INSERT INTO dj_product VALUES(NULL,2,"/img/shop/05.jpg","禅思 Zenmuse X7","禅思X7是为电影拍摄推出的紧凑型S35云台相机，可搭配在Inspire 2上使用。 X7最高可录制6K ");
+INSERT INTO dj_product VALUES(NULL,2,"/img/shop/06.png","禅思 Zenmuse X5S","M4/3航拍相机，可录5.2K CinemaDNG和4k Apple ProRes视频，满足影视航拍需求。");
+INSERT INTO dj_product VALUES(NULL,2,"/img/shop/07.jpg","禅思 Zenmuse X4S","1英寸传感器航拍相机，8.8mm/F2.8-11镜头，可录高达100Mbps的4K 60fps视频。");
+INSERT INTO dj_product VALUES(NULL,2,"/img/shop/08.jpg","禅思 Zenmuse X5R","配备工业级三轴增稳平台，支持录制RAW格式4K视频。");
+INSERT INTO dj_product VALUES(NULL,2,"/img/shop/09.jpg","禅思 Zenmuse X5","高画质M4/3影像传感器，可拍摄4K/30p视频。");
+INSERT INTO dj_product VALUES(NULL,3,"/img/shop/10.jpg","如影 SC 单手持微单稳定器","如影 SC 是针对无反/微单相机设计的专业云台，轻便且性能强大，结构紧凑控制精准，应用场景广泛多样，单人即可完成专业拍摄，为影视制作打开新的思路，创造更多可能。");
+INSERT INTO dj_product VALUES(NULL,3,"/img/shop/11.jpg","如影 Ronin-S","针对单反和微单的专业手持云台，小巧轻便可单手操作。");
+INSERT INTO dj_product VALUES(NULL,3,"/img/shop/12.jpg","如影 Ronin 2","动力强劲的三轴云台，能在任何场景和配备上稳定影像。");
+INSERT INTO dj_product VALUES(NULL,3,"/img/shop/13.jpg","如影 Ronin-MX","同时满足航拍与地拍的专业三轴云台，拍摄效果稳定流畅。");
+INSERT INTO dj_product VALUES(NULL,4,"/img/shop/14.png","DJI大师摇轮","Master Wheels 是大疆推出的一款专业级的摇轮控制器，采用高精度传感器配合全新的控制算法及精湛的...");
+INSERT INTO dj_product VALUES(NULL,4,"/img/shop/15.png","DJI体感控制器专业版","DJI体感控制器专业版采用了先进的通信技术配合全新的控制算法，使云台系统能实时响应体感操作，为专...");
+INSERT INTO dj_product VALUES(NULL,4,"/img/shop/16.jpg","CrystalSky","CrystalSky 高亮显示屏为航拍设计，在强光下能显示清晰的影像。内置DJI GO app提供飞行与拍摄控制...");
+INSERT INTO dj_product VALUES(NULL,4,"/img/shop/17.jpg","DJI 无线跟焦器","专业级无线镜头控制系统，精度高达 ±0.02°。");
+
+
+
+

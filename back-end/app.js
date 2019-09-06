@@ -3,6 +3,7 @@ const express=require('express');
 const userRouter=require('./router/user');
 const proRouter=require('./router/product');
 const index=require('./router/index');
+// const shop=require('./router/shop');
 //引入body-parser中间件
 const bodyParser=require('body-parser');
 var app=express();
@@ -17,4 +18,5 @@ app.use(bodyParser.urlencoded({
 app.use('/user',userRouter);
 app.use('/product',proRouter);
 app.use('/index',index);
+// app.use('/shop',shop);
 

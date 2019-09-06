@@ -45,9 +45,7 @@ $(function(){
     //登录
     $(".btn-login").click(function(){
     var phone=$(".ajax-1>input:eq(0)").val();
-    console.log(phone);
     var upwd=$(".ajax-1>input:eq(1)").val();
-    console.log(upwd)
     $.ajax({
         url:'http://127.0.0.1:8080/user/login',
         type:'post',
@@ -58,7 +56,6 @@ $(function(){
         },
         dataType:"json",
      }).then(result=>{
-        console.log(result);
         var msg=result.code;
         if(msg=="401"){
             $(".msg-p").css("display","block");
@@ -88,8 +85,7 @@ $(function(){
             alert("请勾选同意协议")
             return;
         }
-        var uname=$(".form-2>input:eq(0)").val();
-        console.log(uname);    
+        var uname=$(".form-2>input:eq(0)").val();   
         //账号格式判断
         var reg=/\d{11}/;
         var regs=/@/;
@@ -100,7 +96,6 @@ $(function(){
                      return; 
                  }    
             var upwd=$(".form-2>input:eq(1)").val();
-            console.log(upwd);
                  if(upwd.length<8){
                     $(".msg1-p4").css("display","block"); 
                     $(".form-2>input:eq(1)").click(function(){
@@ -108,7 +103,6 @@ $(function(){
                     return; 
                  }
             var upwd1=$(".form-2>input:eq(2)").val();
-            console.log(upwd1);
              //两次密码是否相等
              if(upwd!==upwd1){
                 $(".msg-p5").css("display","block");
@@ -127,10 +121,8 @@ $(function(){
                 email:uname,
             },
             dataType:"json",
-         }).then(result=>{
-            console.log(result);          
-            var msg=result.code
-                 
+         }).then(result=>{          
+            var msg=result.code                
             //账号是否为空
             if(msg==401){
                 $(".msg-p3").css("display","block");

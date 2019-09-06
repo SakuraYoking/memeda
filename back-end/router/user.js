@@ -18,7 +18,6 @@ if(!sql.phone&&!sql.email){
 }
 pool.query('select * from memeda_user where (phone=? or email=?) and upwd=?',[sql.phone,sql.email,sql.upwd],function(err,result){
     if(err) throw err;
-    console.log(result);
     //判断数据长度是否大于0
     if(result.length>0){
         res.send({code:200,msg:'登录成功'})
@@ -31,7 +30,6 @@ pool.query('select * from memeda_user where (phone=? or email=?) and upwd=?',[sq
 //注册
 router.post('/reg',(req,res)=>{
     var obj=req.body
-    console.log(obj);
     if(!obj.phone&&!obj.email){
         res.send({code:401,msg:'uname required'});
             return;
@@ -42,7 +40,6 @@ router.post('/reg',(req,res)=>{
     var sql='select uid from memeda_user where email=? or phone=?'
     pool.query(sql,[obj.email,obj.phone],(err,result)=>{
         if(err) throw err;
-        console.log(result.length);
         if(result.length>0){
             res.send({code:403,msg:'邮箱或电话已存在'})
             return;
@@ -55,7 +52,6 @@ router.post('/reg',(req,res)=>{
                 var num=Math.floor(Math.random()*arr.length);
                 uname_user+=arr[num];
             }
-            console.log(uname_user);
             var sql;
             var reg=/\d{11}/;
             var regs=/@/;
@@ -64,7 +60,6 @@ router.post('/reg',(req,res)=>{
             }else if(regs.test(obj.phone)){
                 sql="insert into memeda_user(email,upwd,uname_user) values(?,?,?)"
             }
-            console.log(sql);
             pool.query(sql,[obj.phone,obj.upwd,uname_user],(err,result)=>{
                 if(err)throw err;
                 if(result.affectedRows>0){
