@@ -10,7 +10,7 @@ var sql=req.body
 //验证数据是否为正确
 console.log(sql)
 if(!sql.phone&&!sql.email){
-    res.send({code:401,msg:'phone or email required'});
+    res.send({code:401,msg:'uname required'});
 		return;
 }else if(!sql.upwd){
     res.send({code:402,msg:'upwd required'});
@@ -30,36 +30,47 @@ pool.query('select * from memeda_user where (phone=? or email=?) and upwd=?',[sq
 
 //注册
 router.post('/reg',(req,res)=>{
-    var sql=req.body
-    console.log(sql)
-    var sql='select * from memeda_user where email=? or phone=?'
-    console.log(sql);
-    pool.query(sql,[sql.email,sql.phone],(err,result)=>{
+    var obj=req.body
+    console.log(obj);
+    if(!obj.phone&&!obj.email){
+        res.send({code:401,msg:'uname required'});
+            return;
+    }else if(!obj.upwd){
+        res.send({code:402,msg:'upwd required'});
+        return;
+    }
+    var sql='select uid from memeda_user where email=? or phone=?'
+    pool.query(sql,[obj.email,obj.phone],(err,result)=>{
         if(err) throw err;
+        console.log(result.length);
         if(result.length>0){
-            res.send("该手机号或邮箱已存在")
+            res.send({code:403,msg:'邮箱或电话已存在'})
+            return;
         }else{
             //生成6位随机用户名user_name
             var arr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-            var uname="";
+            var uname_user="";
             for(var i=0;i<6;i++){
                 //生成arr的随机下标
                 var num=Math.floor(Math.random()*arr.length);
-                uname+=arr[num];
+                uname_user+=arr[num];
             }
+            console.log(uname_user);
             var sql;
             var reg=/\d{11}/;
-            if(reg.test(uname)){
-                sql="insert into memeda_user(phone,upwd,uname) values(?,?,?)"
-            }else{
-                sql="insert into memeda_user(email,upwd,uname) values(?,?,?)"
+            var regs=/@/;
+            if(reg.test(obj.phone)){
+                sql="insert into memeda_user(phone,upwd,uname_user) values(?,?,?)"
+            }else if(regs.test(obj.phone)){
+                sql="insert into memeda_user(email,upwd,uname_user) values(?,?,?)"
             }
-            pool.query(sql,[phone,upwd,uname],(err,result)=>{
+            console.log(sql);
+            pool.query(sql,[obj.phone,obj.upwd,uname_user],(err,result)=>{
                 if(err)throw err;
                 if(result.affectedRows>0){
-                    res.send("注册成功")
+                    res.send({code:404,msg:'注册成功'})
                 }else{
-                    res.send("注册失败")
+                    res.send({code:405,msg:'注册失败'})
                 }
             })
         }

@@ -55,8 +55,14 @@
                 <div class="child-2">
                     <form action="" class="form-2">
                         <input type="text" name="uname" placeholder="邮箱/电话">
-                        <input type="possword" name="upwd" placeholder="密码">
-                        <input type="possword" name="upwd" placeholder="再次输入密码">
+                        <p class="msg-p3" style="font-size:12px;color:red;display:none;">*账号不能为空</p>
+                        <p class="msg1-p3" style="font-size:12px;color:red;display:none;">*账号格式不对</p>
+                        <p class="msg2-p3" style="font-size:12px;color:red;display:none;">*电话或者邮箱已注册</p>
+                        <input type="password" name="upwd" placeholder="密码">
+                        <p class="msg-p4" style="font-size:12px;color:red;display:none;">*密码不能为空</p>
+                        <p class="msg1-p4" style="font-size:12px;color:red;display:none;">*密码长度不能少于8位</p>
+                        <input type="password" name="upwd" placeholder="再次输入密码">
+                        <p class="msg-p5" style="font-size:12px;color:red;display:none;">*两次密码不一样</p>
                         <div class="ck-box">
                         <input class="checkbox" type="checkbox"><span class="ck-sp">同意并愿意遵守大疆创新<a href="">隐私政策</a>和<a href="">使用条款</a></span>
                         </div>
