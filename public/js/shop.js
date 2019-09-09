@@ -1,6 +1,6 @@
 $(function(){
    $.ajax({
-       url:"http://127.0.0.1:8080/product/list",
+       url:"http://127.0.0.1:8080/shop/list",
        type:"get",
        dataType:"json",
    }).then(result=>{
@@ -31,8 +31,8 @@ $(function(){
                    <div class="ppb-b">
                        <h3>${msg.title}</h3>
                        <p>${msg.subtitle}</p>
-                       <a class="buy-btn" href="" data-id=${msg.uid}>立即购买</a>
-                       <a class="more-btn" href="" data-id=${msg.uid}>了解更多</a>
+                       <a class="buy-btn" href="http://127.0.0.1:8080/shopcart.html?pid=${msg.pid}">立即购买</a>
+                       <a class="more-btn" href="" data-id=${msg.pid}>了解更多</a>
                    </div>
                </div>
            </div>`
@@ -43,8 +43,8 @@ $(function(){
                     <div class="ppb-b">
                         <h3>${msg.title}</h3>
                         <p>${msg.subtitle}</p>
-                        <a class="buy-btn" href="" data-id=${msg.uid}>立即购买</a>
-                        <a class="more-btn" href="" data-id=${msg.uid}>了解更多</a>
+                        <a class="buy-btn" href="http://127.0.0.1:8080/shopcart.html?pid=${msg.pid}" >立即购买</a>
+                        <a class="more-btn" href="" >了解更多</a>
                     </div>
                 </div>
             </div>`
@@ -55,8 +55,8 @@ $(function(){
                     <div class="ppb-b">
                         <h3>${msg.title}</h3>
                         <p>${msg.subtitle}</p>
-                        <a class="buy-btn" href="" data-id=${msg.uid}>立即购买</a>
-                        <a class="more-btn" href="" data-id=${msg.uid}>了解更多</a>
+                        <a class="buy-btn" href="http://127.0.0.1:8080/shopcart.html?pid=${msg.pid}">立即购买</a>
+                        <a class="more-btn" href="">了解更多</a>
                     </div>
                 </div>
             </div>` 
@@ -67,8 +67,8 @@ $(function(){
                     <div class="ppb-b">
                         <h3>${msg.title}</h3>
                         <p>${msg.subtitle}</p>
-                        <a class="buy-btn" href="" data-id=${msg.uid}>立即购买</a>
-                        <a class="more-btn" href="" data-id=${msg.uid}>了解更多</a>
+                        <a class="buy-btn" href="http://127.0.0.1:8080/shopcart.html?pid=${msg.pid}">立即购买</a>
+                        <a class="more-btn" href="">了解更多</a>
                     </div>
                 </div>
             </div>`  

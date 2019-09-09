@@ -4,7 +4,7 @@ const pool=require("../pool");
 
 //轮播图 
 router.get("/",(req,res)=>{
-    var sql=`SELECT * FROM memeda_carouse WHERE uid`;
+    var sql=`SELECT * FROM memeda_carouse WHERE pid`;
     pool.query(sql,[],(err,result)=>{
         if(err){
             res.send(err);
@@ -17,7 +17,7 @@ router.get("/",(req,res)=>{
 
 //主页其他图片
 router.get("/other",(req,res)=>{
-    var sql=`SELECT * FROM index_pic WHERE uid`;
+    var sql=`SELECT * FROM index_pic WHERE pid`;
     pool.query(sql,[],(err,result)=>{
         if(err){
             res.send(err);

@@ -1,15 +1,13 @@
-// const express=require("express");
-// const router=express.Router();
-// const pool=require("../pool");
-// //商品列表
-// router.get("/",(req,res)=>{
-//     var sql=`SELECT * FROM shop_pic WHERE list_uid`;
-//     pool.query(sql,[],(err,result)=>{
-//         if(err){
-//             res.send(err);
-//             console.log(err);
-//         }else{
-//              res.send(result);
-//         }
-//     })
-// })
+const express = require('express')
+const pool = require('../pool.js')
+const router = express.Router();
+
+router.get('/list',(req,res)=>{
+    var sql = "SELECT * FROM dj_product where lid";
+    pool.query(sql,[],(err,result)=>{
+        if(err) throw err;
+        res.send({code:1,mag:"查询成功",data:result})
+    })
+})
+
+module.exports = router;
