@@ -8,7 +8,6 @@ $(function(){
         },
         dataType:"json",
     }).then(result=>{
-        console.log(result[0].pic1);
         var p=$(".middle-pic");
         var o=$(".small-pic");
         var i=$(".pro-list-1");
@@ -33,15 +32,11 @@ $(function(){
                         <p>邮费:免费</p>
                         <a href="">分期最低月付￥916.12起</a>
                     `;
-                    console.log(html);
-                    console.log(html1);
-                    console.log(html2);
                     p.html(html);
                     o.html(html1);
                     i.html(html2);
         $(".small-pic>li").click(function(e){
             var i = $(e.target).index();
-            console.log(i)
             $(".small-pic>li").removeClass("active");
             $(`.small-pic>li:eq(${i})`).addClass("active");
             $(".middle-pic>li").removeClass("active");
