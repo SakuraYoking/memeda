@@ -176,7 +176,31 @@ INSERT INTO memeda_shopcart VALUES(NULL, '/img/shopcart/p26.jpg', '/img/shopcart
 INSERT INTO memeda_shopcart VALUES(NULL, '/img/shopcart/p26.jpg', '/img/shopcart/p27.jpg', '/img/shopcart/p28.jpg', '/img/shopcart/p29.jpg','/img/shopcart/p30.jpg','CrystalSky 高亮显示屏 (5.5 英寸高亮版)',3299);
 INSERT INTO memeda_shopcart VALUES(NULL, '/img/shopcart/p26.jpg', '/img/shopcart/p27.jpg', '/img/shopcart/p28.jpg', '/img/shopcart/p29.jpg','/img/shopcart/p30.jpg','DJI 无线跟焦器',8999);
 
-
+/**购物车**/
+DROP TABLE IF EXISTS settlement;
+CREATE TABLE IF NOT EXISTS settlement(
+  pid int(11)  PRIMARY KEY AUTO_INCREMENT,
+  pic varchar(32),
+  title varchar(32),
+  price int(11)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+INSERT INTO settlement VALUES(NULL,'/img/mycart/01.jpg','悟 Inspire 2',19999);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/02.jpg','灵眸 Osmo Pro/RAW',699);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/03.jpg','悟 Inspire 1 Pro/RAW',18999);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/04.jpg','悟 Inspire 1',15999);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/05.jpg','禅思 Zenmuse X7',16999);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/06.png','禅思 Zenmuse X5S',12499);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/07.jpg','禅思 Zenmuse X4S',13499);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/08.jpg','禅思 Zenmuse X5R',14499);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/09.jpg','禅思 Zenmuse X5',17999);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/10.jpg','如影 SC 单手持微单稳定器',2299);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/11.jpg','如影 Ronin-S',4399);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/12.jpg','如影 Ronin 2',46999);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/13.jpg','如影 Ronin-MX',8699);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/14.png','DJI大师摇轮',50000);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/15.png','DJI体感控制器专业版',8000);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/16.jpg','CrystalSky',3299);
+INSERT INTO settlement VALUES(NULL,'/img/mycart/17.jpg','DJI 无线跟焦器',8999);
 
 
 

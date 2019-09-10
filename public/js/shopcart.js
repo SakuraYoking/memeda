@@ -11,6 +11,7 @@ $(function(){
         var p=$(".middle-pic");
         var o=$(".small-pic");
         var i=$(".pro-list-1");
+        var u=$(".sure-buy-btn")
         var html=` 
                         <li class="active" style="background:url(http://127.0.0.1:8080${result[0].pic1}) no-repeat center; background-size:100% 100%"></li>
                         <li style="background:url(http://127.0.0.1:8080${result[0].pic2}) no-repeat center; background-size:100% 100%"></li>
@@ -32,9 +33,13 @@ $(function(){
                         <p>邮费:免费</p>
                         <a href="">分期最低月付￥916.12起</a>
                     `;
+         var html3=`
+                    <a href="http://127.0.0.1:8080/settlement.html?pid=${result[0].pid}">开始选购</a>
+                    `           
                     p.html(html);
                     o.html(html1);
                     i.html(html2);
+                    u.html(html3);
         $(".small-pic>li").click(function(e){
             var i = $(e.target).index();
             $(".small-pic>li").removeClass("active");

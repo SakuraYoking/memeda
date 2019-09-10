@@ -20,13 +20,22 @@ pool.query('select * from memeda_user where (phone=? or email=?) and upwd=?',[sq
     if(err) throw err;
     //判断数据长度是否大于0
     if(result.length>0){
+        req.session.uid=result[0].uid
         res.send({code:200,msg:'登录成功'})
     }else{
         res.send({code:403,msg:'登录失败'})
     }
 })
 })
-
+//获取登录状态
+router.get('/getSession',(req,res)=>{
+    var uid = req.session.uid
+    if(uid){
+        res.send({code:1,msg:'已登录'})
+    }else{
+        res.send({code:-1,msg:'未登录'})
+    }
+})
 //注册
 router.post('/reg',(req,res)=>{
     var obj=req.body

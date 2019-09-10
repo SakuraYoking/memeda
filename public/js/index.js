@@ -4,13 +4,10 @@ $(function(){
         type:"get",
         dataType:"json",        
     }).then(result=>{
-       console.log(result);
        var L=result.length;
        var p=$("#carouse-tt");
        var y=$("#carouse-c"); 
        var li=$("#ul-idxs");
-       console.log(p);
-       console.log(L);
        var title="";
        var carouse="";
        var list="";
@@ -136,17 +133,13 @@ $(function(){
         type:"get",
         dataType:"json",        
     }).then(result=>{
-        console.log(result);
         var len=result.length;
-        console.log(len);
         var pic=result[0].pic.split(",");
-        console.log(pic);
         var lens=pic.length;
         var lun="";
         for(var i=0;i<lens;i++){
             lun+=`<li class="lun1"><a href="" style="background:url('${pic[i]}') no-repeat center; background-size:100% 100%"><div></div></a></li>`;
         }
-        console.log(lun);
         $("#lun-ul").html(lun);
         $($("#lun-ul").children()[0]).addClass("active1");    
         var L=$("#lun-ul li").length;
