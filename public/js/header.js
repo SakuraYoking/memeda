@@ -3,7 +3,6 @@ $.ajax({
     url:'http://127.0.0.1:8080/user/getSession',
     type:'get',
     success:function(result){
-        console.log(result.uname)
         var p=$(".ul-item-2")
         if(result.code==1){
             $(".down-menu>ul:eq(1)").css("display","block");
@@ -18,6 +17,7 @@ $(".ul-item-3").click(function(){
         url:'http://127.0.0.1:8080/user/exit',
         type:'get',
         success:function(result){
+            console.log(result);
             if(result.code==1){
             $(".down-menu>ul:eq(1)").css("display","none");
             $(".down-menu>ul:eq(0)").css("display","block"); 

@@ -35,7 +35,7 @@ $(function(){
                         <a href="">分期最低月付￥916.12起</a>
                     `;
          var html3=`
-                    <a href="http://127.0.0.1:8080/settlement.html?pid=${result[0].pid}">开始选购</a>
+                    <a href="javascript:;">开始选购</a>
                     `           
                     p.html(html);
                     o.html(html1);
@@ -59,5 +59,23 @@ $(function(){
                 }
             })
         },500);
+        $(".sure-buy-btn").click(function(){
+            $.ajax({
+                url:`http://127.0.0.1:8080/settlement/addCart?pid=${pid}`,
+                type:'get',
+                dataTpye:"json",
+                success:function(result){
+                    if(result.code==-1){
+                        alert("尚未登录")
+                        window.location.href="http://127.0.0.1:8080/login.html"
+                    }else if(result.code==-2){
+                        alert("购物车中已有该商品")
+                    }else{
+                        alert("插入成功")
+                        window.location.href="http://127.0.0.1:8080/settlement.html"
+                    }
+                }
+            })
+          })
     })
 })
