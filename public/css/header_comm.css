@@ -244,11 +244,17 @@ body{
     display: none; 
     border-radius:10px;
 }
-.down-menu-ul{
+.down-menu>ul:nth-child(1){
     list-style: none;
-    text-align: center;
-    
+    text-align: center;  
+    display: block;
 }
+.down-menu>ul:nth-child(2){
+    list-style: none;
+    text-align: center;  
+    display: none;
+}
+
 .down-menu-ul li{
     white-space: nowrap;
     display: inline-block;

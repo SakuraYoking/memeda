@@ -8,6 +8,7 @@ $(function(){
         },
         dataType:"json",
     }).then(result=>{
+        console.log(result[0].title);
         var p=$(".middle-pic");
         var o=$(".small-pic");
         var i=$(".pro-list-1");

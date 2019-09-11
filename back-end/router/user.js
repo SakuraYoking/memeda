@@ -31,10 +31,19 @@ pool.query('select * from memeda_user where (phone=? or email=?) and upwd=?',[sq
 router.get('/getSession',(req,res)=>{
     var uid = req.session.uid
     if(uid){
-        res.send({code:1,msg:'已登录'})
+        var sql = 'select uname_user from memeda_user where uid=?'
+        pool.query(sql,[uid],(err,result)=>{
+            if(err) throw err;
+            res.send({code:1,msg:'已登录',uname:result[0].uname_user})
+        })
     }else{
         res.send({code:-1,msg:'未登录'})
     }
+})
+//退出
+router.get('/exit',(req,res)=>{
+ req.session.destroy();
+ res.send({code:1,msg:"注销成功"})
 })
 //注册
 router.post('/reg',(req,res)=>{
